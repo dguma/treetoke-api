@@ -1,0 +1,4 @@
+-- settings.sql
+CREATE DATABASE treetoke;
+CREATE USER tree WITH PASSWORD 'TreeToke@2021';
+GRANT ALL PRIVILEGES ON DATABASE treetoke TO tree;
