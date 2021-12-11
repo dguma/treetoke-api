@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 class Strain(models.Model):
-    id = models.AutoField(primary_key=True)
+    id = models.CharField(primary_key=True, max_length=255)
     status = models.CharField(max_length=255)
     sort = models.CharField(max_length=255)
     name = models.CharField(max_length=255)

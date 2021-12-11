@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-&mzt5kgpw8-gk=v-xy!@*)l#698i-m%5&)w38pe*n1etubbs-y'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -63,10 +63,12 @@ CORS_ALLOW_METHODS = [
 'PUT',
 ]
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -101,11 +103,11 @@ WSGI_APPLICATION = 'treetoke.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'treetoke',
-        'USER': 'tree',
-        'PASSWORD': 'TreeToke@2021',
-        'HOST': 'localhost'
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd5kf81n7ud4n75',
+        'USER': 'qqwjuotrazvmjz',
+        'PASSWORD': '1d77f4300bd71eca75985074e69ac7c5ce83246e10d62af0fa85935531fd5095',
+        'HOST': 'ec2-34-233-214-228.compute-1.amazonaws.com'
     }
 }
 
