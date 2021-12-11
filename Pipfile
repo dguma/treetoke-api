@@ -11,6 +11,7 @@ gunicorn = "*"
 djangorestframework = "*"
 django-cors-headers = "*"
 whitenoise = "*"
+pytz = "*"
 
 [dev-packages]
 
