@@ -1,1 +1,1 @@
-web: gunicorn gunicorn --pythonpath treetoke treetoke.wsgi --timeout 10
+web: gunicorn treetoke.wsgi --log-file -
