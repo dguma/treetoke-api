@@ -5,5 +5,5 @@ from .models import Strain
 
 
 class StrainsList(viewsets.ModelViewSet):
-    queryset = Strain.objects.all()
+    queryset = Strain.objects.all()[0:5]
     serializer_class = StrainsSerializer
